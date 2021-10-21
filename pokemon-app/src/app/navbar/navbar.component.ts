@@ -62,12 +62,6 @@ export class NavbarComponent implements OnInit {
   }
 
   navigateTo(path: string) {
-    if (path === 'createProduct') {
-      this.router.navigate(['/createProducts']);
-    }
-    if (path === 'productDetails') {
-      this.router.navigate(['/productDetails']);
-    }
     if (path === 'dashboard') {
       this.router.navigate(['/dashboard']);
     }

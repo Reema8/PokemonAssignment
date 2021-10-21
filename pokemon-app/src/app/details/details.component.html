@@ -1,0 +1,215 @@
+<div class='evolution' *ngIf='pokemonProfile'>
+  <div class="card m-3">
+    <div class="card-header" [ngStyle]="{'background-color': pokemonProfile.color,color: 'white' }">
+      <h6>{{pokemonProfile.name|uppercase}}</h6>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+
+        <div class="card-body" style="padding: 50px;">
+          <img class="card-img-top" src= {{pokemonProfile.mainPokemonAvatar}} alt="Card image cap">
+          <h5 class="card-title"><b>{{pokemonProfile.name|uppercase}}</b></h5>
+        </div>
+      </div>
+      <div class="col-md-8" style="padding: 120px;">
+          <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-3 ml-3 mr-1" *ngFor="let type of pokemonProfile.types" [ngStyle]="{'background-color': pokemonProfile.color,color: 'white','text-align': 'center'}">
+              {{type|uppercase}}
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-3"><b>HP</b></div>
+            <div class="col-md-9">
+              <progressbar
+                  class="progress-striped"
+                  max="100"
+                  value="{{pokemonProfile.hp}}"
+                  type="info"
+                  style="height: 120%;"
+                  [ngStyle]="{'bg-info': pokemonProfile.color }"
+                  >
+                  <i>{{pokemonProfile.hp}}</i>
+              </progressbar>
+            </div>
+          </div>
+        <br>
+        <div class="row">
+          <div class="col-md-3"><b>Attack</b></div>
+          <div class="col-md-9">
+            <progressbar
+                class="progress-striped"
+                max="100"
+                value="{{pokemonProfile.attack}}"
+                type="info"
+                style="height: 120%;"
+                >
+                <i>{{pokemonProfile.attack}}</i>
+            </progressbar>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-3"><b>Defense</b></div>
+          <div class="col-md-9">
+            <progressbar
+                class="progress-striped"
+                max="100"
+                value="{{pokemonProfile.defense}}"
+                type="info"
+                style="height: 120%;"
+                >
+                <i>{{pokemonProfile.defense}}</i>
+            </progressbar>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-3"><b>Speed</b></div>
+          <div class="col-md-9">
+            <progressbar
+                class="progress-striped"
+                max="100"
+                value="{{pokemonProfile.speed}}"
+                type="info"
+                style="height: 120%;"
+                >
+                <i>{{pokemonProfile.speed}}</i>
+            </progressbar>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-3"><b>Sp Attack</b></div>
+          <div class="col-md-9">
+            <progressbar
+                class="progress-striped"
+                max="100"
+                value="{{pokemonProfile.specialAttack}}"
+                type="info"
+                style="height: 120%;"
+                >
+                <i>{{pokemonProfile.specialAttack}}</i>
+            </progressbar>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-3"><b>Sp Defense</b></div>
+          <div class="col-md-9">
+            <progressbar
+                class="progress-striped"
+                max="100"
+                value="{{pokemonProfile.specialDefense}}"
+                type="info"
+                style="height: 120%;"
+                >
+                <i>{{pokemonProfile.specialDefense}}</i>
+            </progressbar>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='profile' *ngIf='pokemonProfile'>
+  <div class="card m-3">
+    <div class="card-header"  [ngStyle]="{'background-color': pokemonProfile.color,color: 'white' }">
+      Profile
+    </div>
+    <div class="card-body">
+      <div class="row">
+          <div class="col-md-3">
+            <h6>Height:</h6>
+          </div>
+          <div class="col-md-3">
+          {{pokemonProfile.height}}&nbsp;m
+          </div>
+          <div class="col-md-3">
+            <h6>Weight:</h6>
+          </div>
+          <div class="col-md-3">
+            {{pokemonProfile.weight}}&nbsp;kg
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+            <h6>Catch Rate:</h6>
+          </div>
+          <div class="col-md-3">
+          {{pokemonProfile.catchRate}}
+          </div>
+          <div class="col-md-3">
+            <h6>Gender Ratio:</h6>
+          </div>
+          <div class="col-md-3">
+            123
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <h6>Egg Groups:</h6>
+        </div>
+        <div class="col-md-3">
+        {{pokemonProfile.eggGroups}}
+        </div>
+        <div class="col-md-3">
+          <h6>Hatch Steps:</h6>
+        </div>
+        <div class="col-md-3">
+          {{pokemonProfile.hatchSteps}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+          <h6>Abilities:</h6>
+        </div>
+        <div class="col-md-3">
+        {{pokemonProfile.abilities}}
+        </div>
+        <div class="col-md-3">
+          <h6>EVs:</h6>
+        </div>
+        <div class="col-md-3">
+          123
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+<!--Profile End-->
+<div class='evolution' *ngIf='pokemonProfile'>
+    <div class="card m-3">
+      <div class="card-header" [ngStyle]="{'background-color': pokemonProfile.color,color: 'white' }">
+        <h6>Evolution</h6>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <img class="card-img-top" src= {{pokemonProfile.mainPokemonAvatar}} alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{pokemonProfile.name|uppercase}}</h5>
+          </div>
+        </div>
+        <div *ngIf="pokemonProfile.evolution.length!=0" class="col-md-4" style="text-align: center;margin: auto;">
+          <i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 100px" [ngStyle]="{'color': pokemonProfile.color}"></i>
+          <div><b>Minimum level required is {{pokemonProfile.evolution[0].min_level}}</b></div>
+        </div>
+        <div *ngIf="pokemonProfile.evolution.length!=0" class="col-md-4">
+          <img class="card-img-top" src= {{pokemonProfile.evolvedPokemonAvatar}} alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{pokemonProfile.evolution[0].species_name|uppercase}}</h5>
+          </div>
+        </div>
+        <div *ngIf="pokemonProfile.evolution.length==0"class="col md-4" style="text-align: center;margin: auto;">
+          <b>This is the ultimate form</b>
+        </div>
+      </div>
+    </div>
+</div>
+
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+  <p style="color: white">Please Wait. </p>
+</ngx-spinner>
