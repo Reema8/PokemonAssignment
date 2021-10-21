@@ -1,0 +1,53 @@
+.myHeader{
+    background-color:yellowgreen;
+   /* ul
+    {
+        list-style: none;
+        width: 50%;
+        li{
+            display: inline-block;
+            color: whitesmoke;
+            font-size: large;
+            margin-top: 14px;
+            margin-left: 42px;
+            width: 20%;
+            &:hover
+            {
+                background-color:whitesmoke;
+                color: black;
+            }
+        }
+
+    }*/
+    .row
+    {
+        line-height: 3;
+        margin-left: 1px;
+        a
+        {
+            color:white;
+            font-size: large;
+            text-align: center;
+            width: 11%;
+            &:hover
+                {
+                    background-color:#007bff;
+                    color:black;
+                }
+
+            .active{
+              color: red;
+            }
+        }
+    }
+
+}
+
+.active{
+  color: red;
+}
+@media only screen and (min-width:321px) and (max-width:768px){
+	.myHeader .row a{
+		width: 100%;
+	}
+}

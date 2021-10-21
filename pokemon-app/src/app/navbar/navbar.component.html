@@ -1,0 +1,27 @@
+<div class = 'myHeader'>
+    <div class = 'row'>
+       <!--
+           <ul>
+            <li>Pokemon</li>
+            <li>Home</li>
+            <li>Detail</li>
+        </ul>
+        </div>
+       -->
+        <div></div>
+        <div (click)="navigateTo('dashboard')"  routerLinkActive="active">Home</div>
+        <div  routerLinkActive="active"  routerLinkActive="active">Detail</div>
+        <div *ngIf="userService.isAdmin" (click)="navigateTo('createProduct')" routerLinkActive="active">Create Products</div>
+        <div *ngIf="userService.isAdmin"  (click)="navigateTo('productDetails')" routerLinkActive="active">Product Details</div>
+        <!--<alert *ngIf="searchError.length != 0" type="danger">
+          <strong>Oh snap!</strong> {{searchError}}
+        </alert>-->
+        <div  class="col-md-4 search-bar ml-auto" style="text-align: center;">
+            <input style="width: 50%;height: 70%;"  (keyup.enter)="searchPokemon()" [(ngModel)]="searchQueryPokemon" type="text" placeholder="Search Pokemon">
+        </div>
+
+    </div>
+</div>
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+  <p style="color: white">Please Wait. </p>
+</ngx-spinner>
